@@ -1,5 +1,5 @@
 require 'execjs'
-require 'react/jsx/template'
+require 'react/jsx/processor'
 require 'react/jsx/jsx_transformer'
 require 'react/jsx/babel_transformer'
 require 'rails'
