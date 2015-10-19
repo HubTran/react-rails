@@ -4,7 +4,7 @@ module React
       VERSION = '1'
 
       def self.cache_key
-        @cache_key ||= "#{name}:#{Autoload::Eco::Source::VERSION}:#{VERSION}".freeze
+        @cache_key ||= "#{name}:#{VERSION}".freeze
       end
 
       # Compile template data with JSX transformer.
