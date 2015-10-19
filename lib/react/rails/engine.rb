@@ -5,6 +5,10 @@ module React
         sprockets_env = app.assets || Sprockets # Sprockets 3.x expects this in a different place
         sprockets_env.register_mime_type 'text/jsx', extensions: ['.jsx']
         sprockets_env.register_transformer 'text/jsx', 'application/jsx', React::JSX::Processor
+        sprockets_env.register_transformer_suffix(%w(
+          application/ecmascript-6
+          application/javascript
+        ), 'application/jsx', '.jsx', React::JSX::Processor)
       end
     end
   end
